@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta name="description" content="Raadpleeg de website van de Woningstichting Berg&Terblijt voor informatie over actueel woningaanbod, huren, inschrijven als woningzoekende en aanvragen van reparaties.">
+    <meta name="keywords" content="woningstichting,Berg en Terblijt,Berg&Terblijt,Berg,Terblijt,woningvereniging,woningcorporatie,huurhuis,actueel,huuraanbod,reparaties,huren,inschrijven woningzoekende,woonwens formulier">
+    <meta name="author" content="metatags generator">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="2 month">
+    <title>Website Woningstichting Berg&Terblijt</title>
+    <script type="text/javascript" src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.panelgallery-1_1.js"></script>
+    <script type="text/javascript" src="../Scripts/ddsmoothmenu.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#container').panelGallery();
+        });
+    </script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "smoothmenu1", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/Styles/ddsmoothmenu.css" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 7]>
+        <link href="~/Styles/SiteIE67.css" rel="stylesheet" type="text/css" />        
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header" class="shadow">
+            <table>
+                <tr>
+                    <td>
+                        <div class="divlogo">
+                            <a href="Home.aspx">
+                                <asp:Image ID="imlogo" runat="server" ImageUrl="~/Images/wslogo.gif" BorderStyle="None" />
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <div id="container" class="position">
+                            <img class="imground" src="../Images/slide1.jpg" alt="image 2" name="bt" />
+                            <img class="imground" src="../Images/slide2.jpg" alt="image 2" name="bt" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear">
+        </div>
+        <%-- <img src="Images/01.jpg" alt="image 2" name="bt" width="725" height="150" />
+                        <img src="Images/02.jpg" alt="image 2" name="bt" width="725" height="150" />
+                        <img src="Images/03.jpg" alt="image 2" name="bt" width="725" height="150" />
+                        <img src="Images/04.jpg" alt="image 2" name="bt" width="725" height="150" />
+                        <img src="Images/05.jpg" alt="image 2" name="bt" width="725" height="150" />--%>
+        <%--   </div>      </div>--%>
+        <br />
+        <div id="main">
+            <div class="smoothmenu" id="smoothmenu1">
+                <ul>
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="LaatsteNieuws.aspx">Laatste nieuws</a></li>
+                    <li><a href="OnzeWoningen.aspx">Onze woningen</a></li>
+                    <li><a href="#">Huren</a>
+                        <ul>
+                            <li><a href="HuurNieuw.aspx">Nieuwe huurders</a></li>
+                            <li><a href="HuurOpzeggen.aspx">Huur opzeggen</a></li>
+                            <li><a href="HuurVertrekken.aspx">Vertrekkende huurders</a></li>
+                            <li><a href="#">Reparaties</a>
+                                <ul>
+                                    <li><a href="ReparatieAanvragen.aspx">Aanvragen</a></li>
+                                    <li><a href="Abonnementen.aspx">Abonnementen</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Zelf klussen</a>
+                                <ul>
+                                    <li><a href="ZelfKlussen.aspx">Kluswijzer</a></li>
+                                    <li><a href="Verandering.aspx">Verandering aanvragen</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="InschrijfForm.aspx">Inschrijven</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Over ons</a>
+                        <ul>
+                            <li><a href="Organisatie.aspx">Organisatie</a></li>
+                            <li><a href="AlgemeneInfo.aspx">Algemene info</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Overige info</a>
+                        <ul>
+                            <li><a href="Veno.aspx">Veiligheid en onderhoud</a></li>
+                            <li><a href="Klachten.aspx">Klachten</a></li>
+                            <li><a href="Gehandicapten.aspx">Gehandicapten</a></li>
+                            <li><a href="Bewonersraad.aspx">Bewonersraad</a></li>
+                            <li><a href="Links.aspx">Links</a></li>
+                            <li><a href="Fotogalerij.aspx">Fotogalerij</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Contact.aspx">Contact</a></li>
+                </ul>
+                <br style="clear: left" />
+            </div>
+            <div id="content">
+                <div id="contentLeft">
+                    <asp:ContentPlaceHolder ID="contentplaceholdercontent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="contentMiddle">
+                </div>
+                <div id="contentRightTop">
+                    <u>Snel naar</u>
+                    <br />
+                    <br />
+                    <a class="aurl" target="_blank" href="http://woningstichtingbergenterblijt.nl/Bijlage/VERZOEK_OM_INSCHRIJVING_ALS_WONINGZOEKENDE.doc">
+                        Inschrijf formulier</a><br />
+                    <br />
+                    <a class="aurl" target="_blank" href="http://woningstichtingbergenterblijt.nl/Bijlage/Bijlage_WOONWENS.doc">
+                        Woonwens formulier</a><br />
+                    <br />
+                    <a class="aurl" href="./ReparatieAanvragen.aspx">Reparatie aanvragen</a><br />
+                    <br />
+                </div>
+                <div class="cushycms" id="contentRightBottom">
+                    <u>Laatste nieuws:</u>
+                    <br />
+                    <br />
+                    Blokbrekersstraat 1 is inmiddels verkocht. <a href="./LaatsteNieuws.aspx">Lees meer</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerLeft">
+                Woningstichting Berg en Terblijt <span class="opmaak">|</span> Postbus 548 <span
+                    class="opmaak">|</span> 6325 ZG <span class="opmaak">|</span> Berg en Terblijt
+                <span class="opmaak">|</span> tel: 043 6040854 <span class="opmaak">|</span> <a class="alink"
+                    href="mailto:info@woningstichtingbergenterblijt.nl">info@woningstichtingbergenterblijt.nl</a>
+            </div>
+            <div id="footerRight">
+                <a class="adesign" target="_blank" href="http://nl.linkedin.com/pub/jorg-hamelers/4/9a/2a9">
+                    design</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

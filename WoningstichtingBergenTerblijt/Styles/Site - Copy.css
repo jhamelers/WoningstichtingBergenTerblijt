@@ -1,0 +1,287 @@
+﻿*
+{
+	padding: 0;
+	margin: 0;
+	background: #efefef;
+	background-color: #fefefe;
+	color: #454545;
+}
+
+html
+{
+	height: 98%;
+}
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	height: 100%;
+}
+
+#wrapper
+{
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	min-height: 100%;
+}
+
+.clear
+{
+	clear: both;
+}
+
+#header
+{
+	padding: 10px;
+	border: 1px solid #ccc;
+	height: 150px;
+	margin: 10px 0px 0px 0px;
+	background: #fefefe;
+	-moz-border-radius: 15px;
+	border-radius: 15px;	
+}
+
+.position
+{
+	position: absolute;		
+	float: right;
+	top: 10px;
+	width:33.5%;
+}
+
+.divlogo
+{	
+	position: relative;
+	left: 30px;
+	float: left;
+	width: 15%;
+}
+
+.imground
+{
+	width: 550px;
+	height: 172px;	
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+}
+
+#navigation
+{
+	width: 100%; /*color: #333;*/
+	padding: 10px; /*border: 1px solid #ccc;*/
+	margin: 0px 0px 5px 0px;
+	background: #efefef; /*-moz-border-radius: 15px; 	border-radius: 15px;*/
+}
+
+#main
+{
+	background: #812f0c;
+	height: 72%;
+}
+
+#content
+{
+	/*width: 97.6%; /*-moz-border-radius: 25px 10px / 10px 25px; 	border-radius: 25px 10px / 10px 25px;*/
+	min-height: 100%;	
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #333;
+	border: 1px solid #812f0c;
+	background: #fefefe; /*#f4f0ec;*/
+	padding: 10px;
+		
+}
+
+#contentLeft
+{
+	background: #fefefe;
+	padding: 0px;
+	width: 81%;
+	float: left;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 500px;	
+}
+
+#contentMiddle
+{
+	background: #fefefe;
+	margin: 0px;
+	padding: 0px;
+	width: 3%;
+	height: 530px;	
+	float: left;
+}
+#contentRightTop
+{
+	background: #fefefe;
+	border: 1px solid #eea014;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin: 0px;
+	padding: 10px;
+	width: 13%;
+	height: 30%;
+	float: left;
+}
+
+#contentRightBottom
+{
+	background: #fefefe;
+	border: 1px solid #eea014;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin: 8px 0 0 0;
+	padding: 10px;
+	width: 13%;
+	height: 70%;
+	float: left;
+}
+
+#footer
+{
+	position: fixed;
+	width: 79.9%;
+	border: 1px solid #812f0c;
+	color: #eea014;
+	background: #812f0c;
+	margin: 0px;
+	height: 20px;
+}
+
+#footerLeft
+{
+	margin: 0px;
+	padding: 0 0 0 10px;
+	color: #eea014;
+	background: #812f0c;
+	width: 800px;
+	float: left;
+}
+#footerRight
+{
+	margin: 0px;
+	width: 60px;
+	text-align: right;
+	float: right;
+	color: #eea014;
+	background: #812f0c;
+}
+
+.shadow
+{
+	-moz-box-shadow: 0 0 1em 0.1em #000;
+	-webkit-box-shadow: 0 0 1em 0.1em #000;
+	box-shadow: 0 0 1em 0.1em #000;
+	-moz-box-shadow: 0 0 1em 0.1em #000;
+	-webkit-box-shadow: 0 0 1em 0.1em #000;
+	box-shadow: 0 0 1em 0.1em #000;
+}
+
+/* a href */
+.aurl a:visited
+{
+	color: #812f0c;
+}
+
+.aurl
+{
+	color: #812f0c;
+}
+
+.alink
+{
+	background: #812f0c;
+	color: #eea014;
+}
+
+.alink a:visited
+{
+	color: #eea014;
+}
+
+.adesign
+{
+	background: #812f0c;
+	color: #fea882;
+	text-decoration: none;
+}
+
+.adesign a:visited
+{
+	color: #fea882;
+}
+
+/* p */
+span.opmaak
+{
+	width: 2px;
+	color: white;
+	background: #812f0c;
+}
+
+/* opmaak tabel onze woningen */
+td.silver, strong.silver, b.silver
+{
+	background: Silver;
+}
+
+td.verken, tr.verken
+{
+	background: #dccfca;
+}
+
+strong
+{
+	background: #dccfca;
+}
+
+b.verken
+{
+	background: #dccfca;
+}
+
+em
+{
+	background: #dccfca;
+}
+
+#backgroundimage
+{
+	background: url(../Images/ondergrond.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100%;
+}
+
+#div_left
+{
+	width: 49%;
+	float:left; 
+}
+
+#div_right
+{
+	width: 50%;
+	float:right; 
+}
+
+.div_subleft
+{
+	width: 42%;
+	height: 20px;
+	float:left; 
+}
+
+.div_subright
+{
+	width: 57%;
+	height: 20px;
+	float:right; 
+}
