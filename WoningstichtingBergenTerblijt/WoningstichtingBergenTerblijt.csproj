@@ -75,6 +75,10 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\Nieuwsbrief.aspx.cs">
+      <DependentUpon>Nieuwsbrief.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\Abonnementen.aspx.cs">
       <DependentUpon>Abonnementen.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +218,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\Nieuwsbrief.aspx" />
     <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Publicaties.aspx" />
     <Content Include="Pages\PaymentFailed.aspx" />
