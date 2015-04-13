@@ -75,6 +75,10 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\WoningAanbod.aspx.cs">
+      <DependentUpon>WoningAanbod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\Nieuwsbrief.aspx.cs">
       <DependentUpon>Nieuwsbrief.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,6 +222,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\WoningAanbod.aspx" />
     <Content Include="Pages\Nieuwsbrief.aspx" />
     <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Publicaties.aspx" />

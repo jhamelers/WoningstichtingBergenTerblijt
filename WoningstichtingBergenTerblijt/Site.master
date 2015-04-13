@@ -58,6 +58,7 @@
                 <ul>
                     <li><a href="Home.aspx">Home</a></li>
                     <li><a href="LaatsteNieuws.aspx">Laatste nieuws</a></li>
+                    <li><a href="WoningAanbod.aspx">Woning aanbod</a></li>
                     <li><a href="OnzeWoningen.aspx">Onze woningen</a></li>
                     <li><a href="#">Huren</a>
                         <ul>
