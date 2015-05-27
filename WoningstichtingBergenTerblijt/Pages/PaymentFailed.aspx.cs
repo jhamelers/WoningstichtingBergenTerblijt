@@ -34,21 +34,28 @@ namespace WoningstichtingBergenTerblijt
             string ThisHost = "smtp.vevida.com";
             int ThisPort = 25;
             string EmailSender = "WoningstichtingBergenTerblijt <info@woningstichtingbergenterblijt.nl>";
-            //string EmailSender = "jorg.eu <jorg@jorg.eu>";
             string EmailRecipient = Session["EmailRecipient"] != null ? (string)Session["EmailRecipient"] : "WoningstichtingBergenTerblijt <info@woningstichtingbergenterblijt.nl>";
             string EmailWebmaster = "jorg.hamelers@gmail.com";
                 
             NetMail.From = new MailAddress(EmailSender);
-            NetMail.To.Add(new MailAddress(EmailRecipient));
+            //NetMail.To.Add(new MailAddress(EmailRecipient));
             NetMail.To.Add(new MailAddress(EmailWebmaster));
             NetMail.IsBodyHtml = false;
             NameValueCollection NVCSrvElements = Request.ServerVariables;
             string[] InstanceID = NVCSrvElements.GetValues("INSTANCE_ID");
             NetMail.Headers.Add("X-Instance-ID", Convert.ToString(InstanceID[0]));
-            NetMail.Subject = "Betaling is mislukt! Inschrijving als woningzoekende " + (string)Session["GeslachtAanvrager"] == "M" ? "dhr " : "mevr " + Session["NaamAanvrager"] + ".";
+
+            string geslacht = Session["GeslachtAanvrager"] != null ? (string)Session["GeslachtAanvrager"] : "onbekend";
+
+            if (geslacht == "M")
+                geslacht = "dhr ";
+            else if (geslacht == "V")
+                geslacht = "mevr ";
+            
+            NetMail.Subject = "Betaling is mislukt! Inschrijving als woningzoekende " + geslacht + Session["NaamAanvrager"] + ".";
             NetMail.IsBodyHtml = true;
             NetMail.Body = Session["Error"] != null ? Session["Error"].ToString() : "Er is geen foutmelding bekend.";
-            NetMail.Body += "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>BETAlING MISLUKT</b>";
+            NetMail.Body += "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>BETALING MISLUKT</b>";
             
             MailClient.EnableSsl = true;
             MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;

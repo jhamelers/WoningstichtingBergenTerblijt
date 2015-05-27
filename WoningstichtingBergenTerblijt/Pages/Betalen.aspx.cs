@@ -38,8 +38,13 @@ namespace WoningstichtingBergenTerblijt
             }
             else
             {
+#if DEBUG
+                this.GetTestModeBanks();
+#else
                 //Populate the dropdown with de banks that support iDEAL.
                 this.GetBanks();
+#endif
+
             }
         }
 
@@ -73,7 +78,7 @@ namespace WoningstichtingBergenTerblijt
                            );
 #endif
 
-     //Redirect to the customer's bank
+            //Redirect to the customer's bank
             if (idealFetch.Error == false)
                 this.Response.Redirect(idealFetch.Url, true);
         }
@@ -82,6 +87,18 @@ namespace WoningstichtingBergenTerblijt
         {
             //Retrieve the banks that support iDEAL (in testmode)
             IdealBanks idealBanks = new IdealBanks("1046991", false);
+
+            //Populate the dropdownlist.
+            foreach (Bank bank in idealBanks.Banks)
+            {
+                DropDownList1.Items.Add(new ListItem(bank.Name, bank.Id));
+            }
+        }
+
+        private void GetTestModeBanks()
+        {
+            //Retrieve the banks that support iDEAL (in testmode)
+            IdealBanks idealBanks = new IdealBanks("1046991", true);
 
             //Populate the dropdownlist.
             foreach (Bank bank in idealBanks.Banks)

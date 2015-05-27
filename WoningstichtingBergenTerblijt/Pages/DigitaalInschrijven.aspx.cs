@@ -23,44 +23,47 @@ namespace WoningstichtingBergenTerblijt
         {
             mpContentPlaceHolder = (ContentPlaceHolder)Master.FindControl("contentplaceholdercontent");
             htmlform = (Control)mpContentPlaceHolder.FindControl("form1");
-            //tbBsnNr_A.Text = "123456789";
-            //tbAchternaam_A.Text = "Hamelers";
-            //tbBelastbaarInkomen_A.Text = "40000";
-            //tbBeroep_A.Text = "Consultant";
-            //tbBrutoInkomen_A.Text = "3200";
-            //tbGeboortedatum_A.Text = "16-09-1980";
-            //tbHuisNr_Ac.Text = "32";
-            //tbPostcode_Ac.Text = "6325ct";
-            //tbStraat_Ac.Text = "Blokbrekersstraat";
-            //tbTelefoonnr_A.Text = "0641487563";
-            //tbVoorletters_A.Text = "JAH";
-            //tbWerkgever_A.Text = "CGI";
-            //tbWoonplaats_Ac.Text = "Berg&Terblijt";
-            //rblAanvrager.SelectedIndex = 0;
-            //ddlBurgStaat_A.SelectedIndex = 2;
-            //rblAdresKopieren.SelectedIndex = 1;
-            //rblPartner.SelectedIndex = 2;
+            
+#if DEBUG
+            tbBsnNr_A.Text = "123456789";
+            tbAchternaam_A.Text = "Hamelers";
+            tbBelastbaarInkomen_A.Text = "40000";
+            tbBeroep_A.Text = "Consultant";
+            tbBrutoInkomen_A.Text = "3200";
+            tbGeboortedatum_A.Text = "16-09-1980";
+            tbHuisNr_Ac.Text = "32";
+            tbPostcode_Ac.Text = "6325ct";
+            tbStraat_Ac.Text = "Blokbrekersstraat";
+            tbTelefoonnr_A.Text = "0641487563";
+            tbVoorletters_A.Text = "JAH";
+            tbWerkgever_A.Text = "CGI";
+            tbWoonplaats_Ac.Text = "Berg&Terblijt";
+            rblAanvrager.SelectedIndex = 0;
+            ddlBurgStaat_A.SelectedIndex = 2;
+            rblAdresKopieren.SelectedIndex = 1;
+            rblPartner.SelectedIndex = 2;
 
-            //tbAchternaam_P.Text = "Lindelauf";
-            //tbBeroep_P.Text = "Huisvrouw";
-            //tbGeboortedatum_P.Text = "23-09-1982";
-            //tbTelefoonnr_P.Text = "0631313313";
-            //tbVoorletters_P.Text = "TMP";
-            //ddlBurgStaat_P.SelectedIndex = 2;
+            tbAchternaam_P.Text = "Lindelauf";
+            tbBeroep_P.Text = "Huisvrouw";
+            tbGeboortedatum_P.Text = "23-09-1982";
+            tbTelefoonnr_P.Text = "0631313313";
+            tbVoorletters_P.Text = "TMP";
+            ddlBurgStaat_P.SelectedIndex = 2;
 
-            //tbEmailadres_A.Text = "inschrijving@nieuw.nl";
-            //tbMedeBewoner1_M.Text = "Jorg";
-            //tbMedeBewoner2_M.Text = "Tessa";
-            //tbGeboorteMede1_M.Text = "16-09-1980";
-            //tbGeboorteMede2_M.Text = "23-09-1982";
-            //tbBeroepMede1_M.Text = "Timmerman";
-            //tbBeroepMede2_M.Text = "Metselaar";
-            //ddlGeslachtMede1.SelectedIndex = 2;
-            //ddlGeslachtMede2.SelectedIndex = 3;
-            //ddlGeslachtMede3.SelectedIndex = 1;
-            //ddlGeslachtMede4.SelectedIndex = 1;
+            tbEmailadres_A.Text = "inschrijving@nieuw.nl";
+            tbMedeBewoner1_M.Text = "Jorg";
+            tbMedeBewoner2_M.Text = "Tessa";
+            tbGeboorteMede1_M.Text = "16-09-1980";
+            tbGeboorteMede2_M.Text = "23-09-1982";
+            tbBeroepMede1_M.Text = "Timmerman";
+            tbBeroepMede2_M.Text = "Metselaar";
+            ddlGeslachtMede1.SelectedIndex = 2;
+            ddlGeslachtMede2.SelectedIndex = 3;
+            ddlGeslachtMede3.SelectedIndex = 1;
+            ddlGeslachtMede4.SelectedIndex = 1;
 
-            //tbOpmerkingen.Text = "Test";
+            tbOpmerkingen.Text = "Test";
+#endif
 
         }
 
@@ -101,7 +104,9 @@ namespace WoningstichtingBergenTerblijt
         protected void ButtonInschrijven_Click(object sender, EventArgs e)
         {
             SetData();
-            Server.Transfer("Betalen.aspx");
+            //Server.Transfer("Betalen.aspx");
+            Server.Transfer("Ideal.aspx");
+
         }
 
         private void SetData()
