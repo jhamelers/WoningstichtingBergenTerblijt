@@ -19,6 +19,7 @@ using System.Web.UI.WebControls;
 using Mollie.iDEAL;
 using Mollie.Api;
 using System.Configuration;
+using System.Net;
 
 namespace WoningstichtingBergenTerblijt
 {
@@ -116,6 +117,7 @@ namespace WoningstichtingBergenTerblijt
             NetMail.IsBodyHtml = true;
             NetMail.Body = "De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/>" + Session["Betaling"];
 
+            MailClient.Credentials = new NetworkCredential("info@woningstichtingbergenterblijt.nl", "wsbent6325");
             MailClient.EnableSsl = true;
             MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             MailClient.Host = ThisHost;

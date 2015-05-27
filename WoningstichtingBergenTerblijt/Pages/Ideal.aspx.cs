@@ -78,10 +78,10 @@ namespace WoningstichtingBergenTerblijt
             Issuers issuers = mollieClient.GetIssuers();
 
             //Populate the dropdownlist.
-            foreach (var issuer in issuers.data)
-            {
-                DropDownList1.Items.Add(new ListItem(issuer.name, issuer.id));
-            }
+            //foreach (var issuer in issuers.data)
+            //{
+            //    DropDownList1.Items.Add(new ListItem(issuer.name, issuer.id));
+            //}
         }
                
         protected void btnStart_Click(object sender, EventArgs e)

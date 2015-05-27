@@ -17,6 +17,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Mollie.iDEAL;
+using System.Net;
 
 namespace WoningstichtingBergenTerblijt
 {
@@ -54,8 +55,10 @@ namespace WoningstichtingBergenTerblijt
             
             NetMail.Subject = "Betaling is mislukt! Inschrijving als woningzoekende " + geslacht + Session["NaamAanvrager"] + ".";
             NetMail.IsBodyHtml = true;
-            NetMail.Body = "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>BETALING MISLUKT</b>" + Session["Error"] != null ? Session["Error"].ToString() : "Er is geen foutmelding bekend.";
-            
+            string extra = Session["Error"] != null ? Session["Error"].ToString() : "Er is geen foutmelding bekend.";
+            NetMail.Body = "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>DE BETALING IS MISLUKT</b><br/><br/>" + extra;
+
+            MailClient.Credentials = new NetworkCredential("info@woningstichtingbergenterblijt.nl", "wsbent6325");
             MailClient.EnableSsl = true;
             MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             MailClient.Host = ThisHost;

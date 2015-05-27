@@ -235,6 +235,7 @@
     <Content Include="Site.master" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="packages.config" />
   </ItemGroup>

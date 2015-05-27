@@ -11,10 +11,7 @@
             <br />
             <asp:Label ID="Label1" runat="server" Text="Te betalen bedrag:"></asp:Label><br />
             € <asp:TextBox ID="tbAmount" ReadOnly="True" runat="server" Width="16px">45</asp:TextBox><br />
-            <br />
-            <asp:Label ID="Label2" runat="server" Text="Kies uw bank:"></asp:Label><br />
-            <asp:DropDownList ID="DropDownList1" runat="server">
-            </asp:DropDownList><br/><br/>
+            <br/>
             <hr />
             <br/>
             <asp:Button ID="btnStart" runat="server" Text="Start betaling" OnClick="btnStart_Click" />
