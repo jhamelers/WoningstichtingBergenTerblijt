@@ -127,7 +127,7 @@ namespace WoningstichtingBergenTerblijt
         protected void ButtonWoonwens_Click1(object sender, EventArgs e)
         {
             MakeUpWoonwens();
-            Server.Transfer("Betalen.aspx");
+            Server.Transfer("Ideal.aspx");
         }
 
         protected void btnInschrijven_Click(object sender, EventArgs e)

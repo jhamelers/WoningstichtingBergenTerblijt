@@ -132,13 +132,6 @@
     <Compile Include="Pages\DigitaalWoonwens.aspx.designer.cs">
       <DependentUpon>DigitaalWoonwens.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\IdealCheckHandler.aspx.cs">
-      <DependentUpon>IdealCheckHandler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\IdealCheckHandler.aspx.designer.cs">
-      <DependentUpon>IdealCheckHandler.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\PaymentDone.aspx.cs">
       <DependentUpon>PaymentDone.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,13 +218,6 @@
     <Compile Include="Pages\DigitaalInschrijven.aspx.designer.cs">
       <DependentUpon>DigitaalInschrijven.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Betalen.aspx.cs">
-      <DependentUpon>Betalen.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Betalen.aspx.designer.cs">
-      <DependentUpon>Betalen.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\Ideal.aspx" />
@@ -241,11 +227,9 @@
     <Content Include="Pages\Publicaties.aspx" />
     <Content Include="Pages\PaymentFailed.aspx" />
     <Content Include="Pages\DigitaalWoonwens.aspx" />
-    <Content Include="Pages\IdealCheckHandler.aspx" />
     <Content Include="Pages\PaymentDone.aspx" />
     <Content Include="Pages\Fotogalerij.aspx" />
     <Content Include="Pages\DigitaalInschrijven.aspx" />
-    <Content Include="Pages\Betalen.aspx" />
     <None Include="Bijlage\Bijlage_WOONWENS.doc" />
     <None Include="Bijlage\VERZOEK_OM_INSCHRIJVING_ALS_WONINGZOEKENDE.doc" />
     <Content Include="Site.master" />

@@ -18,6 +18,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Mollie.iDEAL;
 using Mollie.Api;
+using System.Configuration;
 
 namespace WoningstichtingBergenTerblijt
 {
@@ -39,7 +40,7 @@ namespace WoningstichtingBergenTerblijt
 
         private void Validate()
         {
-            string transactionid = Request.QueryString["transaction_id"];
+            mollieClient.setApiKey(ConfigurationManager.AppSettings["mollie_api_key"]);
             string paymentid = Session["PaymentId"] != null ? Session["PaymentId"].ToString() : string.Empty;
 
             if (!string.IsNullOrEmpty(paymentid))
@@ -98,7 +99,7 @@ namespace WoningstichtingBergenTerblijt
 
             NetMail.From = new MailAddress(EmailSender);
             NetMail.To.Add(new MailAddress(EmailRecipient));
-            NetMail.Bcc.Add(new MailAddress("jorg.hamelers@gmail.com"));
+            NetMail.Bcc.Add(new MailAddress(EmailSender));
             NetMail.IsBodyHtml = false;
             NameValueCollection NVCSrvElements = Request.ServerVariables;
             string[] InstanceID = NVCSrvElements.GetValues("INSTANCE_ID");
@@ -141,11 +142,11 @@ namespace WoningstichtingBergenTerblijt
             LocalMail.IsBodyHtml = true;
             LocalMail.Body = "De volgende gegevens zijn ingevuld:<br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/>" + Session["Betaling"];
 
-            MailClient.Send(LocalMail);
+            //MailClient.Send(LocalMail);
 
-            LocalMail.Dispose();
-            LocalMail = null;
-            MailClient = null;
+            //LocalMail.Dispose();
+            //LocalMail = null;
+            //MailClient = null;
         }
     }
 }

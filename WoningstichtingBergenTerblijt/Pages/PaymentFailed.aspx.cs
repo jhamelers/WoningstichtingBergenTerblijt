@@ -34,7 +34,7 @@ namespace WoningstichtingBergenTerblijt
             string ThisHost = "smtp.vevida.com";
             int ThisPort = 25;
             string EmailSender = "WoningstichtingBergenTerblijt <info@woningstichtingbergenterblijt.nl>";
-            string EmailRecipient = Session["EmailRecipient"] != null ? (string)Session["EmailRecipient"] : "WoningstichtingBergenTerblijt <info@woningstichtingbergenterblijt.nl>";
+            string EmailRecipient = Session["EmailRecipient"] != null ? (string)Session["EmailRecipient"] : "geenemailadres@jorg.eu";
             string EmailWebmaster = "jorg.hamelers@gmail.com";
                 
             NetMail.From = new MailAddress(EmailSender);
@@ -54,8 +54,7 @@ namespace WoningstichtingBergenTerblijt
             
             NetMail.Subject = "Betaling is mislukt! Inschrijving als woningzoekende " + geslacht + Session["NaamAanvrager"] + ".";
             NetMail.IsBodyHtml = true;
-            NetMail.Body = Session["Error"] != null ? Session["Error"].ToString() : "Er is geen foutmelding bekend.";
-            NetMail.Body += "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>BETALING MISLUKT</b>";
+            NetMail.Body = "<br/><br/> De volgende gegevens zijn ingevuld: <br/><br/>" + Session["aanvrager"] + Session["partner"] + Session["Medebewoner"] + Session["Woonwens"] + "<br/><br/><b><u>Betalingsgegevens:</u></b><br/><br/><b>BETALING MISLUKT</b>" + Session["Error"] != null ? Session["Error"].ToString() : "Er is geen foutmelding bekend.";
             
             MailClient.EnableSsl = true;
             MailClient.DeliveryMethod = SmtpDeliveryMethod.Network;

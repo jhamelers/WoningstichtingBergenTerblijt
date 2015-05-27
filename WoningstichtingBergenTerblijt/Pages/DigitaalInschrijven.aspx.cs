@@ -40,14 +40,19 @@ namespace WoningstichtingBergenTerblijt
             tbWoonplaats_Ac.Text = "Berg&Terblijt";
             rblAanvrager.SelectedIndex = 0;
             ddlBurgStaat_A.SelectedIndex = 2;
-            rblAdresKopieren.SelectedIndex = 1;
+            rblAdresKopieren.SelectedIndex = 0;
             rblPartner.SelectedIndex = 2;
+            rblTermijn.SelectedIndex = 1;
 
             tbAchternaam_P.Text = "Lindelauf";
             tbBeroep_P.Text = "Huisvrouw";
             tbGeboortedatum_P.Text = "23-09-1982";
             tbTelefoonnr_P.Text = "0631313313";
             tbVoorletters_P.Text = "TMP";
+            tbWoonplaats_P.Text = "Berg&Terblijt";
+            tbHuisNr_P.Text = "32";
+            tbPostcode_P.Text = "6325ct";
+            tbStraat_P.Text = "Blokbrekersstraat";
             ddlBurgStaat_P.SelectedIndex = 2;
 
             tbEmailadres_A.Text = "inschrijving@nieuw.nl";
@@ -104,7 +109,6 @@ namespace WoningstichtingBergenTerblijt
         protected void ButtonInschrijven_Click(object sender, EventArgs e)
         {
             SetData();
-            //Server.Transfer("Betalen.aspx");
             Server.Transfer("Ideal.aspx");
 
         }

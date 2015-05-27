@@ -10,7 +10,7 @@
 namespace WoningstichtingBergenTerblijt {
     
     
-    public partial class Betalen {
+    public partial class Ideal {
         
         /// <summary>
         /// form1 control.
