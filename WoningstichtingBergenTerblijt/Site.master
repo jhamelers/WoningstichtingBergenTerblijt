@@ -97,7 +97,7 @@
                     </li>
                     <li><a href="Bewonersraad.aspx">Bewonersraad</a></li>
                     <li><a href="Publicaties.aspx">Publicaties</a>
-                          <ul>
+                         <ul>
                             <li><a href="Huurovereenkomst.aspx">Huurovereenkomst</a></li>
                             <li><a href="AlgemeneVoorwaarden.aspx">Algemene voorwaarden</a></li>
                         </ul>
