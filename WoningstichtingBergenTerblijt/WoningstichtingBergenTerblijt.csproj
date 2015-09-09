@@ -80,6 +80,14 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\AlgemeneVoorwaarden.aspx.cs">
+      <DependentUpon>AlgemeneVoorwaarden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Huurovereenkomst.aspx.cs">
+      <DependentUpon>Huurovereenkomst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\Ideal.aspx.cs">
       <DependentUpon>Ideal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +228,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\AlgemeneVoorwaarden.aspx" />
+    <Content Include="Pages\Huurovereenkomst.aspx" />
     <Content Include="Pages\Ideal.aspx" />
     <Content Include="Pages\WoningAanbod.aspx" />
     <Content Include="Pages\Nieuwsbrief.aspx" />
