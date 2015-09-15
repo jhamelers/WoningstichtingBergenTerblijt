@@ -80,6 +80,10 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\JaarVerslagen.aspx.cs">
+      <DependentUpon>JaarVerslagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Pages\AlgemeneVoorwaarden.aspx.cs">
       <DependentUpon>AlgemeneVoorwaarden.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +232,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\JaarVerslagen.aspx" />
     <Content Include="Pages\AlgemeneVoorwaarden.aspx" />
     <Content Include="Pages\Huurovereenkomst.aspx" />
     <Content Include="Pages\Ideal.aspx" />
