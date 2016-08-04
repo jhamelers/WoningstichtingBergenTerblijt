@@ -20,6 +20,7 @@ using Mollie.iDEAL;
 using Mollie.Api;
 using System.Configuration;
 using System.Net;
+using System.IO;
 
 namespace WoningstichtingBergenTerblijt
 {
@@ -32,11 +33,27 @@ namespace WoningstichtingBergenTerblijt
         {
             // Als de betalign voltooid is mogen de gegevens opgestuurd worden
             Validate();
+            SchrijfGegevensNaarFile();
 #if DEBUG
             MailGegevensLokaal();
 #else
             MailGegevens();
 #endif
+        }
+
+        private void SchrijfGegevensNaarFile()
+        {
+            using (StreamWriter _writer = new StreamWriter(Server.MapPath("~/" + "temp/"+ DateTime.Now.ToString("BackUp_yyyy-dd-M--HH-mm-ss") + ".txt"), true))
+            {
+                _writer.WriteLine("Inschrijving als woningzoekende: " + Session["NaamAanvrager"]);
+                _writer.WriteLine("Aanvrager: " + Session["aanvrager"]);
+                _writer.WriteLine("Partner: " + Session["partner"]);
+                _writer.WriteLine("Medebewoner: " + Session["Medebewoner"]);
+                _writer.WriteLine("Woonwens: " + Session["Woonwens"]);
+                _writer.WriteLine("Betaling: " + Session["Betaling"]);
+                _writer.Flush();
+            }
+
         }
 
         private void Validate()
